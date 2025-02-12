@@ -36,7 +36,7 @@ EsisteNome(nomi, "Luigi");
 
 //esercizio 3
 
-static int[] Numbers(int dimension)
+static void Numbers(int dimension)
 {
     int[] numbers = new int[dimension];
     Random random = new Random();
@@ -44,9 +44,10 @@ static int[] Numbers(int dimension)
     {
         numbers[i] = random.Next(1, 101);
     }
-    Console.WriteLine(numbers);
-    return numbers;
 
+    Console.WriteLine("Numeri generati: " + string.Join(", ", numbers));
+    Console.WriteLine("La somma dei numeri dell'array è: " + numbers.Sum());
+    Console.WriteLine("La media dei numeri dell'array è: " + numbers.Average());
 }
 
 Numbers(15);
