@@ -14,22 +14,27 @@
         }
 
         public void AperturaConto(double importo)
-        { if (NuovoConto)
+        {
+            if (NuovoConto)
             {
                 if (importo <= 1000)
                 {
                     Saldo = importo;
                     NuovoConto = false;
+                    Console.WriteLine($"Conto aperto con successo per il cliente {Nome} {Cognome}; saldo pari a {Saldo}");
                 }
                 else
                 {
                     Saldo = 1000;
                     NuovoConto = false;
                     Console.WriteLine("L'importo massimo per l'apertura del conto è di 1000 euro");
-
+                    Console.WriteLine($"Conto aperto con successo per il cliente {Nome} {Cognome}; saldo pari a {Saldo}");
                 }
             }
-            else { Console.WriteLine("Il conto è già stato aperto"); }
+            else
+            {
+                Console.WriteLine("Il conto è già stato aperto");
+            }
         }
 
         public void Versamento(double importo)
@@ -37,6 +42,7 @@
             if (importo > 0)
             {
                 Saldo += importo;
+                Console.WriteLine($"Versamento di {importo} effettuato con successo; saldo pari a {Saldo}");
             }
             else
             {
@@ -51,10 +57,11 @@
                 if (Saldo >= importo)
                 {
                     Saldo -= importo;
+                    Console.WriteLine($"Prelievo di {importo} effettuato con successo; saldo pari a {Saldo}");
                 }
                 else
                 {
-                    Console.WriteLine("Saldo non sufficiente");
+                    Console.WriteLine($"Saldo pari a {Saldo}, non sufficiente per un prelievo di {importo}");
                 }
             }
             else
@@ -62,6 +69,5 @@
                 Console.WriteLine("L'importo deve essere maggiore di 0");
             }
         }
-
     }
 }
