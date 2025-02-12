@@ -32,3 +32,22 @@ static void EsisteNome(String[] nomi, String nome)
 
 EsisteNome(nomi, "Mario");
 EsisteNome(nomi, "Luigi");
+
+
+//esercizio 3
+
+static int[] Numbers(int dimension)
+{
+    int[] numbers = new int[dimension];
+    Random random = new Random();
+    for (int i = 0; i < dimension; i++)
+    {
+        numbers[i] = random.Next(1, 101);
+    }
+    Console.WriteLine(numbers);
+    return numbers;
+
+}
+
+Numbers(15);
+

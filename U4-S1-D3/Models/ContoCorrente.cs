@@ -61,7 +61,7 @@
                 }
                 else
                 {
-                    Console.WriteLine($"Saldo pari a {Saldo}, non sufficiente per un prelievo di {importo}");
+                    Console.WriteLine($"Saldo pari a {Saldo}, non sufficiente per un prelievo di {}");
                 }
             }
             else
